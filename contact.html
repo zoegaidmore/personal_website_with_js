@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- This is where styling info will go -->
+    <style>
+        pretty-footer {
+            display: block;
+            text-align: right;
+            font-family: Garamond, sans-serif;
+            color: white;
+            background: linear-gradient(to top, #f05f9c, #f8dbe8);
+            padding: 2em; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="contact.html">Contact Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li> <a href="organizations.html">Organizations</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interests.html">Interests</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="contact">
+
+        <img class="contact_pic" src="contact_me_pic.jpeg" alt="An image of me, standing in the shade underneath trees." loading="lazy" style="width:346px;height:460px;">
+
+        <h3>Zoe Gaidmore</h3>
+        <p>zgdublin@gmail.com</p>
+
+        <div class="Contact_links">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/zoe-gaidmore-90008829a/">Linkedin</a></li>
+                <li><a href="https://github.com/zoegaidmore">GitHub</a></li>
+                <li><a href="https://www.instagram.com/zoe.gaidmore/?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr#">Instagram</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <hr>
+
+    <h3>Fill out this form about the website!</h3>
+    <details>
+        <summary>About the Form:</summary>
+        <p>
+            This form gathers information about the user viewing the website, such as first and last name
+            and what browswer the user is viewing from. It then asks for feedback about this website, 
+            like where the viewer found it and their thoughts.
+        </p>
+    </details>
+
+    <br><br>
+
+
+    <form action="/submit-form" method="post">
+
+        <fieldset>
+            <legend>Personal Info:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+        </fieldset>
+
+        <br><br>
+
+        <label for="browser">Which browswer are you viewing this website on?</label>
+        <input list="browsers" name="browser" id="browser">
+
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+            <option value="Other">
+        </datalist>
+
+        <br><br>
+
+
+        <label for="location">Where did you find this website?</label>
+        <select  name="location" id="loc">
+            <optgroup label="Where did you find this:">
+                <option value="social media">Social Media</option>
+                <option value="search engine">Search Engine</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="other">Other</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
+        <label for="review">Review of my webstie:</label>
+
+        <textarea id="review" name="review" rows="2" cols="100"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <address>
+        Written by <a href="mailto:zgdublin@gmail.com">Zoe Gaidmore</a>.<br>
+        Visit us at:<br>
+        9450 Gilman Drive<br>
+        La Jolla, CA<br>
+        USA
+    </address>
+
+    <footer>
+        <pretty-footer>Website made with love by: Zoe Gaidmore</pretty-footer>
+    </footer>
+    
+</body>
+
+
+
+</html> 
