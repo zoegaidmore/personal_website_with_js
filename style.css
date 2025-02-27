@@ -28,7 +28,7 @@
     --main-pink-color:#f85a7f;
     --darker-pink-color: #f63461;
     --light-pink-color: #fcb9c9;
-    --lightest-pink-color:#f7f2f4;
+    --lightest-pink-color:#fbeef3;
 }
 
 body {
@@ -220,4 +220,38 @@ strong {
 
 .bragging {
     color: color-mix(display-p3 75% red 25% blue);
+}
+
+
+form {
+    background: var(--lightest-pink-color);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 1px solid var(--main-pink-color); 
+    padding: 10px;
+}
+
+button {
+    background: var(--main-pink-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: var(--darker-pink-color);
+    color: white;
 }
