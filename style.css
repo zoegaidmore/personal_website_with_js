@@ -264,5 +264,15 @@ input:invalid {
 req {
     color: red;
 }
+
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+.invalid {
+    border: 1px dotted red;
+}
+
   
   
