@@ -224,7 +224,7 @@ strong {
 
 
 form {
-    background: var(--lightest-pink-color);
+    background: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -236,7 +236,7 @@ fieldset {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    border: 1px solid var(--main-pink-color); 
+    border: 1px solid #999; 
     padding: 10px;
 }
 
@@ -255,3 +255,14 @@ button:hover {
     background: var(--darker-pink-color);
     color: white;
 }
+
+
+input:invalid {
+    border: 1px dotted red;
+}
+
+req {
+    color: red;
+}
+  
+  

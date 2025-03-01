@@ -1,0 +1,27 @@
+<form action="https://httpbin.org/post" method="post">
+
+    <fieldset>
+        <legend>Personal Info:</legend>
+        <label for="fname">First name:<req>*</req></label>
+        <input type="text" id="fname" name="fname" required minlength="2" maxlength="30"><br><br>
+        <label for="lname">Last name:<req>*</req></label>
+        <input type="text" id="lname" name="lname" required minlength="2" maxlength="30"><br><br>
+    </fieldset>
+
+    <br><br>
+
+    <label for="email">Email:<req>*</req></label>
+    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    <br>
+
+
+    <label for="comments">Comments:<req>*</req></label><br>
+    <textarea id="comments" name="comments" rows="4" required minlength="1" maxlength="200" pattern="[A-Za-z0-9 .,!?'-]+"></textarea><br><br>
+
+    <br>
+
+    <input type="hidden" name="possible_bot" value="true">
+
+    <button type="submit">Submit</button>
+    
+</form>
