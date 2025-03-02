@@ -280,20 +280,16 @@ req {
     background: rgba(246, 3, 3, 0.238);
 }
 
-
-/* Default counter style */
 #commentsInfo {
     font-size: 0.8em;
     color: black;
 }
 
-/* Warning state (yellow) */
 #commentsInfo.warn {
     color: orange;
     font-weight: bold;
 }
 
-/* Error state (red) */
 #commentsInfo.error {
     color: red;
     font-weight: bold;

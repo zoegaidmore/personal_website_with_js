@@ -1,27 +1,99 @@
-<form action="https://httpbin.org/post" method="post">
+<!DOCTYPE html>
+<html lang="en">
 
-    <fieldset>
-        <legend>Personal Info:</legend>
-        <label for="fname">First name:<req>*</req></label>
-        <input type="text" id="fname" name="fname" required minlength="2" maxlength="30"><br><br>
-        <label for="lname">Last name:<req>*</req></label>
-        <input type="text" id="lname" name="lname" required minlength="2" maxlength="30"><br><br>
-    </fieldset>
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
 
-    <br><br>
+    <style>
+        form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
 
-    <label for="email">Email:<req>*</req></label>
-    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-    <br>
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid #999; 
+            padding: 10px;
+        }
+
+        button {
+            background: var(--main-pink-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: var(--darker-pink-color);
+            color: white;
+        }
 
 
-    <label for="comments">Comments:<req>*</req></label><br>
-    <textarea id="comments" name="comments" rows="4" required minlength="1" maxlength="200" pattern="[A-Za-z0-9 .,!?'-]+"></textarea><br><br>
+        input:invalid {
+            border: 1px dotted red;
+        }
 
-    <br>
+        req {
+            color: red;
+        }
 
-    <input type="hidden" name="possible_bot" value="true">
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
 
-    <button type="submit">Submit</button>
-    
-</form>
+        .invalid {
+            border: 1px dotted red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Personal Info:</legend>
+            <label for="fname">First name:<req>*</req></label>
+            <input type="text" id="fname" name="fname" required minlength="2" maxlength="30"><br><br>
+            <label for="lname">Last name:<req>*</req></label>
+            <input type="text" id="lname" name="lname" required minlength="2" maxlength="30"><br><br>
+        </fieldset>
+
+        <br><br>
+
+        <label for="email">Email:<req>*</req></label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <br>
+
+
+        <label for="comments">Comments:<req>*</req></label><br>
+        <textarea id="comments" name="comments" rows="4" required minlength="1" maxlength="200" pattern="[A-Za-z0-9 .,!?'-]+"></textarea><br><br>
+
+        <br>
+
+        <input type="hidden" name="possible_bot" value="true">
+
+        <button type="submit">Submit</button>
+        
+    </form>
+
+</body>
+
+</html>
