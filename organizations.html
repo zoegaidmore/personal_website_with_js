@@ -9,6 +9,8 @@
     <meta name="author" content="Zoe Gaidmore">
     <link rel="stylesheet" href="style.css">
 
+    <script src="script.js"></script>
+
     <!-- This is where styling info will go -->
     <style>
         pretty-footer {
@@ -40,8 +42,14 @@
     </nav>
     
     <main>
+
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
+        
         <section class = "organizations">
-            <div class="Pi Beta Phi">
+            <text-square class="Pi Beta Phi">
 
                 
 
@@ -62,11 +70,11 @@
                     organize study hours, create academic support plans for members whose GPA doesn't meet chapter 
                     expectations, plan a scholarship banquet, and ensure our chapter maintains good academic standing. 
                 </p>
-            </div>
+            </text-square>
 
             
         
-            <div class="WIC">
+            <text-square class="WIC">
                 <h2><abbr title="Women In Computing">WIC</abbr></h2>
                 <img src="wic.png" alt="Women In Computing's Logo" style="width:300ps;height:300px;">
                 <h3>About</h3>
@@ -80,11 +88,11 @@
                     I participated in the Fall 2023 project teams, where my team and I created an <i>I Miss my DJ</i> website.
                     This website won first place out of all of the submissions, through a vote by members of WIC.
                 </p>
-            </div>
+            </text-square>
 
             
         
-            <div class="GWC">
+            <text-square class="GWC">
                 <h2>Girls Who Code</h2>
                 <img src="girls_who_code.png" alt="Girls Who Code logo" style="width:300px;height:300px;">
                 <h3>About</h3>
@@ -104,7 +112,7 @@
 
                 <iframe src="https://girlswhocode.com/" title="Girls Who Code Homepage"></iframe>
 
-            </div>
+            </text-square>
 
     </section>
     </main>

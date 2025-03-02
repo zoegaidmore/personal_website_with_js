@@ -5,6 +5,48 @@
     - All images have alt text and are contrasting/easy to view
 */
 
+:root {
+    --main-pink-color:#f85a7f;
+    --darker-pink-color: #f63461;
+    --light-pink-color: #fcb9c9;
+    --lightest-pink-color:#fbeef3;
+
+    --bg-color-light: white;
+    --text-color-light:black;
+    --bg-color-dark: rgb(24, 24, 24); 
+    --text-color-dark: white;
+
+    --bg-color2-light: #f5f5f5;
+    --bg-color2-dark: #333;
+}
+
+html {
+
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+       
+}
+
+#themeToggle {
+    border: none;
+    padding: 20px;
+}
+
+.switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+
+
+
 
 /* Using a custom font! */
 @font-face {
@@ -16,25 +58,18 @@
 }
 
 
-
 /* animation */ 
 @keyframes slideHeader {
     0% { transform: translateX(-100%);}
     100% { transform: translateX(0);}
-  }
-
-
-:root {
-    --main-pink-color:#f85a7f;
-    --darker-pink-color: #f63461;
-    --light-pink-color: #fcb9c9;
-    --lightest-pink-color:#fbeef3;
 }
+
+
+
 
 body {
     font-family: 'MyFont', "PT Sans", sans-serif;
     /* PT Sans is a backup if the custom font does not load */
-    background-color: white;
     padding: 5px;
 }
 
@@ -142,11 +177,12 @@ img {
     justify-items: center;           
 }
 
-.projects > div {
-    background-color: var(--lightest-pink-color);
+text-square {
+    background-color: var(--bg-color2-light);
     padding: 20px;
     border-radius: 8px;
 }
+
 
 .organizations {
     display: grid;                 
@@ -157,12 +193,6 @@ img {
     min-height: 100dvh; 
     margin: 0;    
     justify-items: center;          
-}
-
-.organizations > div {
-    background-color: var(--lightest-pink-color);
-    padding: 20px;
-    border-radius: 8px;
 }
 
 
@@ -176,11 +206,8 @@ img {
     justify-items: center; 
 }
 
-.education > div {
-    background-color: var(--lightest-pink-color);
-    padding: 20px;
+#education-text-square {
     width: 90dvw;
-    border-radius: 8px;
 }
 
 .interests {
@@ -194,11 +221,6 @@ img {
     align-items: center;
 }
 
-.interests > div {
-    background-color: var(--lightest-pink-color);
-    padding: 20px;
-    border-radius: 8px;
-}
 
 
 picture {
@@ -207,6 +229,7 @@ picture {
 
 .interestsStatement {
     background-color: white;
+    color: black;
     transition: background-color 2s ease;
 }
 
@@ -224,7 +247,7 @@ strong {
 
 
 form {
-    background: #f5f5f5;
+    background: var(--bg-color2-light);
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -282,7 +305,6 @@ req {
 
 #commentsInfo {
     font-size: 0.8em;
-    color: black;
 }
 
 #commentsInfo.warn {

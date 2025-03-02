@@ -1,3 +1,72 @@
+LIGHT_SRC = "moon.png"
+DARK_SRC = "sun.png"
+
+function setTheme(theme) {
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+
+    let textSquares = document.querySelectorAll('text-square');
+
+    let forms = document.querySelectorAll('form');
+
+    if (theme === 'dark'){
+        root.style.setProperty('background', 'var(--bg-color-dark)');
+        root.style.setProperty('color', 'var(--text-color-dark)');
+
+        
+        textSquares.forEach(function(square) {
+            square.style.setProperty('background', 'var(--bg-color2-dark)');
+        });
+
+        forms.forEach(function(form) {
+            form.style.setProperty('background', 'var(--bg-color2-dark)');
+        });
+
+        toggle['src'] = DARK_SRC;
+
+    }
+    else{
+        root.style.setProperty('background', 'var(--bg-color-light)');
+        root.style.setProperty('color', 'var(--text-color-light)');
+
+        textSquares.forEach(function(square) {
+            square.style.setProperty('background', 'var(--bg-color2-light)');
+        });
+
+        forms.forEach(function(form) {
+            form.style.setProperty('background', 'var(--bg-color2-light)');
+        });
+
+        toggle['src'] = LIGHT_SRC;
+        
+    }
+}
+
+
+function toggleTheme()
+{
+    const currTheme = localStorage.getItem('theme') || 'light';
+    const newTheme = currTheme === 'light'? 'dark': 'light';
+    localStorage.setItem('theme', newTheme);
+    setTheme(newTheme);
+}
+
+
+function setSavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme) {
+        setTheme(savedTheme);
+        document.getElementById('themeToggle').checked = (savedTheme === 'dark');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', setSavedTheme);
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("myForm");
     const fname = document.getElementById("fname");

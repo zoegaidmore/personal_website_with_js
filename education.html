@@ -9,6 +9,8 @@
     <meta name="author" content="Zoe Gaidmore">
     <link rel="stylesheet" href="style.css">
 
+    <script src="script.js"></script>
+
     <!-- This is where styling info will go -->
     <style>
         table, th, td {
@@ -44,7 +46,11 @@
 
     <main class = "education">
 
-        <div class="Petaluma High">
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
+        <text-square class="Petaluma High">
             <h2>Petaluma High School</h2>
 
             <img src="grad_gown.jpeg" alt="Me in my graduation gown, on a bench in a dried grass field." loading="lazy" style="width:300px;height:300px;">
@@ -67,11 +73,11 @@
                 <figcaption>Here is a clip from my Valedictorian speech at graduation.</figcaption>
             </figure>
 
-        </div>
+        </text-square>
 
         
 
-        <div class="UCSD">
+        <text-square class="UCSD" id="education-text-square">
             <h2>University of California, San Diego</h2>
 
             <p>UCSD is a public university in La Jolla, California.</p>
@@ -128,7 +134,7 @@
                     <td>The process of talking to customers about software. Android Studio.</td>
                 </tr>
             </table>
-        </div>
+        </text-square>
 
         
 

@@ -9,6 +9,8 @@
     <meta name="author" content="Zoe Gaidmore">
     <link rel="stylesheet" href="style.css">
 
+    <script src="script.js"></script>
+
     <!-- This is where styling info will go -->
     <style>
         pretty-footer {
@@ -41,13 +43,17 @@
 
     <main>
 
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
         <section class = "interestsStatement">
             <p>I <strong>love</strong> dance, golf, music, nature, and <strong>so much</strong> more!</p>
         </section>
 
         <section class="interests">
 
-            <div class="Dance">
+            <text-square class="Dance">
 
                 <h3>Irish Dance</h3>
                 <p> 
@@ -67,11 +73,11 @@
 
                 <p>And here is an image of me and my team at the Western U.S. region Oireachtas, 2023!</p>
                 <img src="dance_team.jpeg" alt="8 Girls wearing red dresses and dark brown wigs." loading="lazy" style="width:234;height:268px;">
-            </div>
+            </text-square>
 
             
 
-            <div class="Golf">
+            <text-square class="Golf">
                 <h3>Golf</h3>
 
                 <p>In high school, I was on the girls golf team, and was captain my senior year.</p>
@@ -80,11 +86,11 @@
 
                 <img src="golf.jpeg" alt="Me and two girls standing on grass wearing our high school golf uniforms." loading="lazy" style="width:336px;height:448px;">
                 
-            </div>
+            </text-square>
 
             
 
-            <div class="Music">
+            <text-square class="Music">
                 <h3>Music</h3>
 
                 <canvas id="myCanvas">
@@ -135,7 +141,7 @@
                     <dd>I love Taylor Swift, Sabrina Carpenter, and Tate McRae.</dd>
                 </dl>
 
-            </div>
+            </text-square>
 
         </section>
 
